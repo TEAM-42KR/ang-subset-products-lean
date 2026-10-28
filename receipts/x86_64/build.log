@@ -1,0 +1,164 @@
+✔ [8706/8734] Built AngCounterexample.LayerSeparator (3.6s)
+⚠ [8707/8734] Built Challenge (3.7s)
+warning: Challenge.lean:34:8: declaration uses `sorry`
+warning: Challenge.lean:41:8: declaration uses `sorry`
+warning: Challenge.lean:49:8: declaration uses `sorry`
+✔ [8709/8734] Built AngCounterexample.LargeData (3.8s)
+✔ [8710/8734] Built AngCounterexample.Basic (8.4s)
+⚠ [8711/8734] Built AngCounterexample.RealizationPrimes (4.6s)
+warning: AngCounterexample/RealizationPrimes.lean:33:30: Variable name `hℓ` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hℓ
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: AngCounterexample/RealizationPrimes.lean:68:56: This simp argument is unused:
+  dif_neg
+
+Hint: Omit it from the simp argument list.
+  [apply] simp only [q, show ¬(3 : Fin 4).val < 3 by decide]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8712/8734] Built AngCounterexample.LayerCore (4.7s)
+warning: AngCounterexample/LayerCore.lean:140:25: this tactic is never executed
+
+Note: This linter can be disabled with `set_option linter.unreachableTactic false`
+warning: AngCounterexample/LayerCore.lean:140:25: Unused tactic linter: `ring` does nothing
+
+Note: This linter can be disabled with `set_option linter.unusedTactic false`
+✔ [8713/8734] Built AngCounterexample.LayerArithmetic (4.8s)
+✔ [8714/8734] Built AngCounterexample.RealizationGrowth (7.3s)
+⚠ [8715/8734] Built AngCounterexample.RealizationBounds (4.1s)
+warning: AngCounterexample/RealizationBounds.lean:14:2: Try this: 
+  haveI̵
+
+The goal is a proposition, so `have` is preferred over `haveI`.
+The difference between `have` and `haveI` is that `haveI` inlines the value.
+But this is not relevant for proofs because of proof irrelevance.
+
+Note: This linter can be disabled with `set_option linter.style.haveILetI false`
+✔ [8716/8734] Built AngCounterexample.LayerProducts (4.0s)
+✔ [8717/8734] Built AngCounterexample.Forcing (4.6s)
+✔ [8718/8734] Built AngCounterexample.PrimeShift (4.6s)
+⚠ [8719/8734] Built AngCounterexample.LayerClassify (4.9s)
+warning: AngCounterexample/LayerClassify.lean:44:26: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [hp.factorization, Ne.symm hrp]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: AngCounterexample/LayerClassify.lean:53:39: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [(G.prime 3 j).factorization, (hq 3 j).symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: AngCounterexample/LayerClassify.lean:57:6: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.factorization_pow, (G.prime (ri i) j).factorization, (hq (ri i) j).symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: AngCounterexample/LayerClassify.lean:112:52: This simp argument is unused:
+  Finsupp.single_apply
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [v, Nat.factorization_pow, hp.factorization, (hq i j).symm]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: AngCounterexample/LayerClassify.lean:153:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+warning: AngCounterexample/LayerClassify.lean:231:66: This simp argument is unused:
+  fact_p_pow hp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.factorization_mul, hp.ne_zero, G.row_ne_zero, G.rowMon_ne_zero, Nat.factorization_pow,
+    G.row_fact_p hq, G.rowMon_fact_p hq, hp.factorization]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+warning: AngCounterexample/LayerClassify.lean:252:6: This simp argument is unused:
+  fact_p_pow hp
+
+Hint: Omit it from the simp argument list.
+  [apply] simp [Nat.factorization_mul (pow_ne_zero _ hp.ne_zero) (G.colProd_ne_zero a _), hp.factorization,
+    G.colProd_fact_p hq]
+
+Note: This linter can be disabled with `set_option linter.unusedSimpArgs false`
+⚠ [8720/8734] Built AngCounterexample.LargeGlue (3.5s)
+info: AngCounterexample/LargeGlue.lean:28:41: Try this:
+  [apply] ring_nf
+  
+  The `ring` tactic failed to close the goal. Use `ring_nf` to obtain a normal form.
+    
+  Note that `ring` works primarily in *commutative* rings. If you have a noncommutative ring, abelian group or module, consider using `noncomm_ring`, `abel` or `module` instead.
+warning: AngCounterexample/LargeGlue.lean:23:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: AngCounterexample/LargeGlue.lean:23:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: AngCounterexample/LargeGlue.lean:26:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: AngCounterexample/LargeGlue.lean:26:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: AngCounterexample/LargeGlue.lean:28:23: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: AngCounterexample/LargeGlue.lean:28:37: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [8721/8734] Built AngCounterexample.LargePrice (3.8s)
+⚠ [8722/8734] Built AngCounterexample.LayerBounds (4.1s)
+warning: AngCounterexample/LayerBounds.lean:27:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+ℹ [8723/8734] Built AngCounterexample.LargeRealization (6.8s)
+info: AngCounterexample/LargeRealization.lean:201:0: 'AngLarge.large_realization' depends on axioms: [propext, Classical.choice, Quot.sound]
+✔ [8724/8734] Built AngCounterexample.LargeConstruction (3.1s)
+⚠ [8725/8734] Built AngCounterexample.LayerFinite (3.5s)
+warning: AngCounterexample/LayerFinite.lean:89:4: `push_neg` has been deprecated. Prefer using `push Not` instead.
+If you'd rather continue using `push_neg` in your project, you can implement it as follows:
+```
+open Lean.Parser.Tactic in
+macro "push_neg" cfg:optConfig loc:(location)? : tactic =>
+  `(tactic| push $cfg:optConfig Not $[$loc]?)
+```
+⚠ [8726/8734] Built AngCounterexample.LayerWitnesses (3.1s)
+warning: AngCounterexample/LayerWitnesses.lean:19:20: Variable name `j0` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _j0
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+✔ [8727/8734] Built AngCounterexample.LargeLayer (3.2s)
+✔ [8728/8734] Built AngCounterexample.LargeMain (3.1s)
+✔ [8729/8734] Built AngCounterexample (2.7s)
+✔ [8731/8734] Built Solution (3.1s)
+ℹ [8733/8734] Built Audit (5.0s)
+info: Audit.lean:38:0: AUDIT axioms oeis_60957_conjecture_0.disproof: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT axioms Ang.disproof: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT axioms Ang.counterexample: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT declarations using sorry directly: []
+info: Audit.lean:68:0: AUDIT axioms large_prime_counterexamples: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms large_prime_interval_conjecture_false: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_prime_counterexamples: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_prime_interval_conjecture_false: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.saturated_residual_gap: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_realization: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT all development declarations checked: 619
+info: Audit.lean:68:0: AUDIT placeholders (0): []
+Build completed successfully (8734 jobs).

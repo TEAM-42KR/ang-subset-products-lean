@@ -1,0 +1,7 @@
+architecture: aarch64
+vCPUs: 4
+memory_total: 30.8 GiB (MemTotal 32248128 kB)
+lean --version: Lean (version 4.33.1, aarch64-unknown-linux-gnu, commit 819816b2e0a3bf405af45ae5c7af2491d8f5bee6, Release)
+mathlib: tag v4.33.1, commit 0df444a360eaa60ab8c11dca51a86af692955474 (all dependency checkouts equal to lake-manifest.json, clean)
+steps: lake exe cache get; lake build; lake env lean Check.lean (empty project directory)
+build: 2026-10-28T03:23:31Z to 2026-10-28T03:24:37Z, exit 0

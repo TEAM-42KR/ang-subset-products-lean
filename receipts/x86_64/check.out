@@ -1,0 +1,41 @@
+oeis_60957_conjecture_0.disproof : ¬∀ (n p : ℕ),
+    Nat.Prime p →
+      p ≤ n → ∀ (m a : ℕ), m ∈ products n → p ^ a * m ∈ products n → ∀ (k : ℕ), 0 < k → k < a → p ^ k * m ∈ products n
+'oeis_60957_conjecture_0.disproof' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Ang.counterexample' depends on axioms: [propext, Classical.choice, Quot.sound]
+large_prime_counterexamples (ε : ℝ) (hε : 0 < ε) (N : ℕ) :
+  ∃ n p u a b c,
+    N ≤ n ∧
+      Nat.Prime p ∧
+        n < p ^ 2 ∧
+          ↑n ^ (1 - ε) < ↑p ∧
+            ¬p ∣ u ∧ a < b ∧ b < c ∧ p ^ a * u ∈ products n ∧ p ^ c * u ∈ products n ∧ p ^ b * u ∉ products n
+'large_prime_counterexamples' depends on axioms: [propext, Classical.choice, Quot.sound]
+large_prime_interval_conjecture_false :
+  ¬∀ (n p : ℕ),
+      Nat.Prime p →
+        n < p ^ 2 →
+          ∀ (u a b c : ℕ),
+            ¬p ∣ u → a < b → b < c → p ^ a * u ∈ products n → p ^ c * u ∈ products n → p ^ b * u ∈ products n
+'large_prime_interval_conjecture_false' depends on axioms: [propext, Classical.choice, Quot.sound]
+AngLarge.saturated_residual_gap {ℓ t a n p : ℕ} (G : AngLarge.Grid ℓ) (_hℓ : 2 ≤ ℓ) (_ht : 2 ≤ t) (_ha : 1 ≤ a)
+  (hbal : ∀ (i : Fin 3), ∑ α ∈ AngLarge.layer t, ↑(α i) + 1 = a) (C : AngLarge.Cutoffs G t a n p) (hp : Nat.Prime p)
+  (hnp : n < p ^ 2) (hq : ∀ (i : Fin 4) (j : Fin ℓ), G.q i j ≠ p) (j0 : Fin ℓ) :
+  ∃ S1 S3,
+    S1 ⊆ Finset.Icc 1 n ∧
+      S3 ⊆ Finset.Icc 1 n ∧
+        S1.prod id = p * G.H a ∧
+          S3.prod id = p ^ 3 * G.H a ∧
+            (∀ x ∈ S1, ∀ (i : Fin 3) (j : Fin ℓ), G.form a j0 x i j = 0) ∧
+              (∀ x ∈ S3, ∀ (i : Fin 3) (j : Fin ℓ), G.form a j0 x i j = 0) ∧
+                ∀ S ⊆ Finset.Icc 1 n,
+                  (∀ x ∈ S, ∀ (i : Fin 3) (j : Fin ℓ), G.form a j0 x i j = 0) → S.prod id ≠ p ^ 2 * G.H a
+'AngLarge.saturated_residual_gap' depends on axioms: [propext, Classical.choice, Quot.sound]
+AngLarge.large_realization (t a : ℕ) (ht : 2 ≤ t) (ha : t * (t + 1) < 3 * a) (ε : ℝ) (hε : 1 / (↑t + 1) < ε) (N : ℕ) :
+  ∃ ℓ G n p,
+    2 ≤ ℓ ∧
+      N ≤ n ∧
+        Nat.Prime p ∧
+          n < p ^ 2 ∧
+            ↑n ^ (1 - ε) < ↑p ∧ (∀ (i : Fin 4) (j : Fin ℓ), G.q i j ≠ p) ∧ Nonempty (AngLarge.Cutoffs G t a n p)
+'AngLarge.large_realization' depends on axioms: [propext, Classical.choice, Quot.sound]

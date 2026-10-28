@@ -1,0 +1,21 @@
+lines '[k/n] Built <module>' in build.log (Mathlib files come from the cache): 25
+error lines: 0
+warning lines: 24
+'declaration uses sorry' warnings: 3
+warning: Challenge.lean:34:8: declaration uses `sorry`
+warning: Challenge.lean:41:8: declaration uses `sorry`
+warning: Challenge.lean:49:8: declaration uses `sorry`
+audit lines (AUDIT): 12
+info: Audit.lean:38:0: AUDIT axioms oeis_60957_conjecture_0.disproof: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT axioms Ang.disproof: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT axioms Ang.counterexample: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:38:0: AUDIT declarations using sorry directly: []
+info: Audit.lean:68:0: AUDIT axioms large_prime_counterexamples: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms large_prime_interval_conjecture_false: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_prime_counterexamples: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_prime_interval_conjecture_false: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.saturated_residual_gap: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT axioms AngLarge.large_realization: [propext, Classical.choice, Quot.sound]
+info: Audit.lean:68:0: AUDIT all development declarations checked: 619
+info: Audit.lean:68:0: AUDIT placeholders (0): []
+Build completed successfully (8734 jobs).
